@@ -1,0 +1,39 @@
+pipeline {
+  agent any
+
+  stages{ // This is a placeholder Jenkinsfile so that you can automate actions and gates in your project
+          // Rename to "Jenkinsfile" to enable integration with https://jenkins.platformdxc.com/
+          // Please refer to https://github.dxc.com/platform-dxc/jenkins#examples for more examples you can use
+          // and additional references.
+    stage('Lint') { 
+      steps {
+        echo "Do Static Code Checking, Spell Checking, Syntax Checking, etc."
+      }
+    }
+    stage('Build') {
+      steps {
+        echo "Build Processes – Any assembly activities that chains source together."
+      }
+    }
+    stage('Package') {
+      steps {
+        echo "Product Component packaged for deployment. Packages should be uploaded to Platform DXC's Artifactory" 
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo "Deployment of the Package must be tested" 
+      }
+    }
+    stage('Test') {
+      steps {
+       echo "Automatic Testing of the Product Component, can be repeated under another test name"
+      }
+    }
+    stage('Verify') {
+      steps {
+        echo "OOSS automated checks. See https://github.dxc.com/platform-dxc/ooss"
+       }
+    }
+  }
+}

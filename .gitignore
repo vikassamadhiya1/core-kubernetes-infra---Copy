@@ -1,0 +1,5 @@
+*/node_modules/*
+node_modules/*
+generator-PDXC/node_modules/*
+/.vs/*
+.vscode/launch.json
